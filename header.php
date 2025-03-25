@@ -60,6 +60,18 @@
           <a class="nav-link" href="#">Link</a>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"aria-expanded="false">Pays</a>
+
+        <?php
+        foreach $lesPays as $countrie {
+
+        }
+        ?>
+        
+        
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+        <a class="dropdown-item" href="index2.php?name=Africa">Afrique</a></div>
+
+
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
