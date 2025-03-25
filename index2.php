@@ -17,7 +17,9 @@
 <?php
 require_once 'inc/manager-db.php';
 $continent = $_GET['name'];
+
 $desPays = getCountriesByContinent($continent);
+$toutLesPays = getAllCountries()
 ?>
 
 <main role="main" class="flex-shrink-0">
@@ -27,6 +29,7 @@ $desPays = getCountriesByContinent($continent);
     <div>
      <table class="table">
          <tr>
+           <th>Drapeau</th>
            <th>Nom</th>
            <th>Population</th>
            <th>Continent</th>
@@ -38,10 +41,10 @@ $desPays = getCountriesByContinent($continent);
           $continent = ($_GET['name']);
           $desPays = getCountriesByContinent($continent);
         }
-        else{
+        /*else if (!empty($_GET['name'])) {
           $continent = "Monde";
-          $desPays = getAllCountries();
-        }
+          $desPays = getAllCountries($pays);
+        }*/
         ?>
 
 
@@ -52,6 +55,7 @@ $desPays = getCountriesByContinent($continent);
        foreach ($desPays as $pays) {
        ?>
           <tr>
+            <td> <?php echo $pays->id ?></td>
             <td> <?php echo $pays->Name ?></td>
             <td> <?php echo $pays->Population ?></td>
             <td> <?php echo $pays->Continent ?></td>
@@ -67,6 +71,9 @@ $desPays = getCountriesByContinent($continent);
         <code>
       <?php
         //var_dump($desPays[0]);
+        if (!empty($_GET['name'])) {
+          $continent = "Monde";
+        }
         ?>
         </code>
     </p>

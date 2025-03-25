@@ -62,9 +62,9 @@
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"aria-expanded="false">Pays</a>
 
         <?php
-        foreach $lesPays as $countrie {
+        /*foreach $lesPays as $countries {
 
-        }
+        }*/
         ?>
         
         
