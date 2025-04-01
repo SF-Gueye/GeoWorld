@@ -45,7 +45,7 @@
 <body class="d-flex flex-column h-100">
 <header>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="index.php">GeoWorld</a>
+    <a class="navbar-brand" href="mapWorld.php">GeoWorld</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -110,21 +110,23 @@
     </div>
   </nav>
 </header>
+<?php //SGBD = Systeme de Gestion de Base de Donnee = PHP MyAdmin ?>
 
 
-<?php /*
-    require_once 'inc/manager-db.php';
-    $lesContinents = getContinent() ;
-    $lesPays = getAllCountries();
-    //var_dump($lesContinents);
-    // ?>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"aria-expanded="false">Continent</a>
-      <div class="dropdown-menu" aria-labelledby="dropdown01">
-        <?php foreach($lesContinents as $leContinent) : ?>
-          <a class="dropdown-item" href="index2.php?name=
-          <?= $leContinent->continent ; ?>"<?= $leContinent->continent; ?> </a>
-          <?php endforeach ; ?>
-        </div>
-      </li>*/
+<?php
+require_once 'inc/manager-db.php';
+$lesContinents = getContinent() ;
+$lesPays = getAllCountries();
+//var_dump($lesContinents);
 ?>
+
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-
+  toggle="dropdown" aria-haspopup="true"
+  aria-expanded="false">Continent</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown01">
+    <?php foreach($lesContinents as $leContinent) : ?>
+    <a class="dropdown-item" href="index2.php?name=<?= $leContinent->continent ; ?>"><?= $leContinent->continent; ?> </a>
+    <?php endforeach ; ?>
+  </div>
+</li>
